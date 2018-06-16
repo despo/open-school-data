@@ -1,6 +1,15 @@
 <html>
   <head>
     <title>Open School Data API</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120915335-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120915335-1');
+    </script>
+
   </head>
   <body>
     <%= Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(t('pages.index')).html_safe %>
