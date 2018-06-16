@@ -1,24 +1,17 @@
-# README
+# Open School Data
+#
+**Open School Data** is a JSON API of Open state-funded schools data. Any data used are available for download on the GOV UK [Get School Information](https://get-information-schools.service.gov.uk/) service website.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
 
-Things you may want to cover:
+Retrieve a subset of schools by text based filtering ([run](http://open-school-data.recompile.io/schools.json\?keyword\=Tadcaster))
 
-* Ruby version
+```
+curl http://open-school-data.recompile.io/schools.json\?keyword\=Tadcaster
+```
 
-* System dependencies
+Retrieve a school by urn ([run](http://open-school-data.recompile.io/schools/144631.json))
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+curl http://open-school-data.recompile.io/schools/144631.json
+```
