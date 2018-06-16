@@ -1,33 +1,64 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  pages:
+    index: |
+      # Open School Data
+      #
+      **Open School Data** is a JSON API providing information about UK State funded schools.
+
+      The API is powered with unprocessed data retrieved from the [Get School Information](https://get-information-schools.service.gov.uk/) service.
+
+      ## Usage
+
+      Filter schools by keyword
+
+      ```
+        curl http://open-school-data.herokuapp.com/schools.json\?keyword\=County Durham
+      ```
+
+      Retrieve a school by their urn
+
+      ```
+        curl http://open-school-data.herokuapp.com/schools/144631.json
+      ```
+
+      Sample School JSON
+
+      ```
+        {
+           "school":{
+              "URN":"144631",
+              "LA (code)":"881",
+              "LA (name)":"Essex",
+              "EstablishmentNumber":"2160",
+              "EstablishmentName":"Milwards Primary School and Nursery",
+              "TypeOfEstablishment (name)":"Academy sponsor led",
+              "EstablishmentStatus (name)":"Open",
+              "ReasonEstablishmentOpened (name)":"New Provision",
+              "OpenDate":"01-07-2017",
+              "PhaseOfEducation (name)":"Primary",
+              "StatutoryLowAge":"3",
+              "StatutoryHighAge":"11",
+              "Boarders (name)":"No boarders",
+              "OfficialSixthForm (name)":"Does not have a sixth form",
+              "Gender (name)":"Mixed",
+              "ReligiousCharacter (name)":"Does not apply",
+              "AdmissionsPolicy (name)":"Not applicable",
+              "UKPRN":"10064474",
+              "Street":"Paringdon Road",
+              "Locality":"",
+              "Address3":"",
+              "Town":"Harlow",
+              "County (name)":"Essex",
+              "Postcode":"CM19 4QX",
+              "SchoolWebsite":"",
+              "TelephoneNum":"01279435850",
+              "HeadTitle (name)":"Mrs",
+              "HeadFirstName":"Mary",
+              "HeadLastName":"Evans",
+              "HeadPreferredJobTitle":"",
+              "GOR (name)":"East of England",
+              "ParliamentaryConstituency (code)":"E14000729",
+              "ParliamentaryConstituency (name)":"Harlow"
+           }
+      }
+      ```

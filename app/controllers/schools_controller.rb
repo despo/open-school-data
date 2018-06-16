@@ -10,10 +10,10 @@ class SchoolsController < ApplicationController
   end
 
   def index
-    keyword = params["keyword"] || ""
-    return render json: { error: 'keyword must be at least 3 characters long'}.to_json unless keyword.length > 2
+    @keyword = params["keyword"] || ""
+    return render json: { error: 'keyword must be at least 3 characters long'}.to_json unless @keyword.length > 2
 
-    @schools = SpreadsheetIo.new.search(keyword)
+    @schools = SpreadsheetIo.new.search(@keyword)
     expires_in 1.days, public: true
   end
 
