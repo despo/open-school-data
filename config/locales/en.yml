@@ -5,60 +5,19 @@ en:
       #
       **Open School Data** is a JSON API providing information about UK State funded schools.
 
-      The API is powered with unprocessed data retrieved from the [Get School Information](https://get-information-schools.service.gov.uk/) service.
+      The API is powered with data retrieved from the [Get School Information](https://get-information-schools.service.gov.uk/) service.
 
       ## Usage
 
-      Filter schools by keyword
+      Retrieve a subset of schools by text based filtering ([view example](http://open-school-data.recompile.io/schools.json\?keyword\=Tadcaster))
 
       ```
-        curl http://open-school-data.herokuapp.com/schools.json\?keyword\=County Durham
+        curl http://open-school-data.recompile.io/schools.json\?keyword\=Tadcaster
       ```
 
-      Retrieve a school by their urn
+      Retrieve a school by urn ([view example](http://open-school-data.recompile.io/schools/144631.json))
 
       ```
-        curl http://open-school-data.herokuapp.com/schools/144631.json
+        curl http://open-school-data.recompile.io/schools/144631.json
       ```
 
-      Sample School JSON
-
-      ```
-        {
-           "school":{
-              "URN":"144631",
-              "LA (code)":"881",
-              "LA (name)":"Essex",
-              "EstablishmentNumber":"2160",
-              "EstablishmentName":"Milwards Primary School and Nursery",
-              "TypeOfEstablishment (name)":"Academy sponsor led",
-              "EstablishmentStatus (name)":"Open",
-              "ReasonEstablishmentOpened (name)":"New Provision",
-              "OpenDate":"01-07-2017",
-              "PhaseOfEducation (name)":"Primary",
-              "StatutoryLowAge":"3",
-              "StatutoryHighAge":"11",
-              "Boarders (name)":"No boarders",
-              "OfficialSixthForm (name)":"Does not have a sixth form",
-              "Gender (name)":"Mixed",
-              "ReligiousCharacter (name)":"Does not apply",
-              "AdmissionsPolicy (name)":"Not applicable",
-              "UKPRN":"10064474",
-              "Street":"Paringdon Road",
-              "Locality":"",
-              "Address3":"",
-              "Town":"Harlow",
-              "County (name)":"Essex",
-              "Postcode":"CM19 4QX",
-              "SchoolWebsite":"",
-              "TelephoneNum":"01279435850",
-              "HeadTitle (name)":"Mrs",
-              "HeadFirstName":"Mary",
-              "HeadLastName":"Evans",
-              "HeadPreferredJobTitle":"",
-              "GOR (name)":"East of England",
-              "ParliamentaryConstituency (code)":"E14000729",
-              "ParliamentaryConstituency (name)":"Harlow"
-           }
-      }
-      ```
